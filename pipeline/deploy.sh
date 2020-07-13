@@ -2,4 +2,7 @@
 echo "****************************"
 echo "*****deploy new image*******"
 echo "****************************"
-docker run -d -p 8080:8080 orirothschild/stanley-project:latest
+
+
+ docker-compose -f ./demo/docker-compose.yml  up -d
+# docker run -d -p 8080:8080 orirothschild/stanley-project:latest
