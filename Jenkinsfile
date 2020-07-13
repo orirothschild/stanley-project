@@ -15,27 +15,34 @@
         }
 
         stage('Test') {
-        steps {
-              sh './pipeline/test.sh'
-            }
-            post {
-                always {
-                    junit 'target/surefire-reports/*.xml'
+            steps {
+                sh './pipeline/test.sh'
                 }
+                // post {
+                //     always {
+                //         junit 'target/surefire-reports/*.xml'
+                //     }
+                // }
+        }
+
+        stage('Build dockerfile'){
+            steps{
+            sh './pipeline/compose.sh'
             }
         }
 
-        // stage('Build dockerfile'){
-        //     steps{
-        //     sh './pipeline/build_dockerfile.sh'
-        //     }
-        // }
-
-        // stage('push dockerfile to Dockerhub'){
-        //     steps{
-        //     sh './pipeline/upload_image_nexus.sh'
-        //     }
-        // }
+        stage('push dockerfile to Dockerhub'){
+            steps{
+            sh './pipeline/push.sh'
+            }
+        }
+        
+        stage('deploy image'){
+            steps{
+            sh './pipeline/deploy.sh'
+        }
+    }
+     
      
     }
  }
