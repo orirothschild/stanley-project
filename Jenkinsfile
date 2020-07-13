@@ -17,6 +17,7 @@
         stage('Test') {
             steps {
                 sh './pipeline/test.sh'
+                sh 'ls'
                 }
                  post {
                      always {
