@@ -20,7 +20,7 @@
                 }
                  post {
                      always {
-                         junit 'Jenkins/workspace/stanley-project_master/demo/target/surefire-reports/TEST-com.example.demo.DemoApplicationTests.xml'
+                         junit 'workspace/stanley-project_master/demo/target/surefire-reports/TEST-com.example.demo.DemoApplicationTests.xml'
                      }
                  }
         }
