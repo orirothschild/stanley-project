@@ -14,16 +14,16 @@
             }
         }
 
-        stage('Test') {
-        steps {
-              sh './pipeline/test.sh'
-            }
-            post {
-                always {
-                    junit 'target/surefire-reports/*.xml'
-                }
-            }
-        }
+        // stage('Test') {
+        // steps {
+        //       sh './pipeline/test.sh'
+        //     }
+        //     post {
+        //         always {
+        //             junit 'target/surefire-reports/*.xml'
+        //         }
+        //     }
+        // }
 
         // stage('Build dockerfile'){
         //     steps{
