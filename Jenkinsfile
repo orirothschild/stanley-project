@@ -20,9 +20,9 @@
                 sh 'ls'
                 }
                  post {
-                     always {
-                         junit './demo/target/surefire-reports/TEST-com.example.demo.DemoApplicationTests.xml'
-                     }
+                    //  always {
+                    //      junit './demo/target/surefire-reports/TEST-com.example.demo.DemoApplicationTests.xml'
+                    //  }
                  }
         }
 
