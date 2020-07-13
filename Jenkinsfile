@@ -2,8 +2,8 @@
     agent any
 
     environment{     
-        DOCKER_PASS = credentials('docker-pass')  
-        DOCKER_ID = credentials('docker-id') 
+        DOCKER_PASS = credentials('dockerhub-pass')  
+        DOCKER_ID = credentials('dockerhub-id') 
 
     }
 
