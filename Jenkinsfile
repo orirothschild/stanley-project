@@ -21,7 +21,7 @@
                 }
                  post {
                      always {
-                         junit 'demo/target/surefire-reports/TEST-com.example.demo.DemoApplicationTests.xml'
+                         junit './demo/target/surefire-reports/TEST-com.example.demo.DemoApplicationTests.xml'
                      }
                  }
         }
