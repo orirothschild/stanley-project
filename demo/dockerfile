@@ -1,14 +1,11 @@
 
 FROM maven:3.6.1-jdk-8-alpine AS MAVEN_BUILD
 
-WORKDIR '/app'
-# copy the source tree and the pom.xml to our new container
 COPY . .
  
 # package our application code
 RUN mvn clean package
  
-
 FROM openjdk:8-jre-alpine3.9
 
 COPY --from=MAVEN_BUILD /app/target/demo-0.0.1-SNAPSHOT.jar /demo.jar

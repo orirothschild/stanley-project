@@ -27,7 +27,8 @@
 
         stage('Build dockerfile'){
             steps{
-            sh './pipeline/compose.sh'
+                sh 'ls'
+                sh './pipeline/compose.sh'
             }
         }
 
@@ -36,7 +37,7 @@
             sh './pipeline/push.sh'
             }
         }
-        
+
         stage('deploy image'){
             steps{
             sh './pipeline/deploy.sh'
