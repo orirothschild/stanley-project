@@ -20,7 +20,7 @@
                 }
                  post {
                      always {
-                         junit 'target/surefire-reports/*.xml'
+                         junit 'tests/results/*.xml'
                      }
                  }
         }
