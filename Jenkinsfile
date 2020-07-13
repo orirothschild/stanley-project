@@ -19,11 +19,11 @@
                 sh './pipeline/test.sh'
                 sh 'ls'
                 }
-                 post {
-                    //  always {
-                    //      junit './demo/target/surefire-reports/TEST-com.example.demo.DemoApplicationTests.xml'
-                    //  }
-                 }
+                //  post {
+                //     //  always {
+                //     //      junit './demo/target/surefire-reports/TEST-com.example.demo.DemoApplicationTests.xml'
+                //     //  }
+                //  }
         }
 
         stage('Build dockerfile'){
