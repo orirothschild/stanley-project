@@ -3,4 +3,4 @@ echo "****************************"
 echo "****building dockerfile*****"
 echo "****************************"
 
-docker build -t ori/stanley-project:latest ../demo
+docker build -t ori/stanley-project:latest ./demo
